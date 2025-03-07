@@ -1,0 +1,1 @@
+// !folder naỳ đung để cho nhưng component nào có chung layout chỉ đc sài bên trong này

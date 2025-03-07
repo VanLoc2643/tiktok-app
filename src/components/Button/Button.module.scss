@@ -1,0 +1,76 @@
+// !Lam nút luôn xem font size trc vì size có thể làm ảnh hưởng đến độ cao của nút
+.wrapper {
+    font-size: 1.6rem;
+    // height: 36px;
+    font-weight: 700;
+    min-width: 100px;
+    // ?Nên thê padding ngang phòng ngừa chữ dài quá bị chọc ra
+    padding: 9px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: solid 1px transparent;
+    user-select: none;
+    + .wrapper {
+        margin-left: 8px;
+    }
+    // !tang do uu tien co style khac
+    &.disabled {
+        cursor: default;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+// ?Button Type
+
+.rounded {
+    border-radius: 80px;
+    border-color: var(--gray-color);
+    border-width: 1.5px;
+    background-color: #fff;
+    &:hover {
+        background-color: #c1bdbd46;
+        border-color: #a0a0ac;
+    }
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+    &:hover {
+        border-color: var(--primary-color);
+        background-color: #cb4963;
+    }
+}
+.outline {
+    color: var(--primary-color);
+    border-color: currentColor;
+    &:hover {
+        border-color: currentColor;
+        background-color: #5c333c2d;
+    }
+}
+.text {
+    background-color: transparent;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// !Buton Size
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+.medium {
+}
+.large {
+    min-width: 148px;
+    padding: 14px 16px;
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
